@@ -1,4 +1,4 @@
-class Salary {
+export class Salary {
     private salary: number;
     private name: string;
 
@@ -17,14 +17,14 @@ class Salary {
 
     public setName(name: string): void {
         if (name === null) {
-            throw new Error("Negative name is invalid.");
+            throw new Error("Имя не может быть пустым.");
         }
         this.name = name;
     }
 
     public setSalary(salary: number): void {
         if (salary < 0) {
-            throw new Error("Negative salary is invalid.");
+            throw new Error("Зарплата не может быть отрицательной.");
         }
         this.salary = salary;
     }
@@ -40,15 +40,4 @@ class Salary {
     private getAdditionalBonus(): number {
         return this.salary * 0.1;
     }
-
-    public toString(): string {
-        return `{
-            name: ${this.name},
-            salary: ${this.salary}
-        }`;
-    }
 }
-
-// Пример использования
-const employee = new Salary("Иванов", 15000);
-console.log(employee.getGrossSalary());
