@@ -1,5 +1,5 @@
 {
-  "name": "tusur-tests-task-2",
+  "name": "tusur-tests-task",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -13,5 +13,7 @@
     "prettier": "^3.0.3",
     "readline": "^1.3.0"
   },
-  "scripts": {}
+  "scripts": {
+    "start": "bun run ./src/index.ts"
+  }
 }
