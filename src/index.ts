@@ -1,3 +1,3 @@
 import { evenNumberSum } from "./features";
 
-evenNumberSum();
+void evenNumberSum();
